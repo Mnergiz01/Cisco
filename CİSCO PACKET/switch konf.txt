@@ -1,0 +1,24 @@
+1-enable //ayrıcalıklı moda geçer
+2-show vlan //sw nin üzerindeki configurasyonları gösterir vlan1 default sw nin bütün portları vlan1 e bağlı
+3-conf terminal // konfigürsayon moduna geçer
+4-vlan 9 //vlan oluşturur
+5-name akademik // vlana isim atar
+6-exit //vlan dan çıkar
+7-vlan 10
+8-name ogrenci 
+9-interface fastethernet 0/1 //portları atıyoruz 
+10-switchport access vlan 9 // 0-1 portuna vlan 9 u atadık
+11-exit
+12-interface fa 0/2 
+13-switch port access vlan 10 
+14-exit
+15-interface range fa 0/3-4
+16-switchport access vlan 15
+17-exit
+18-interface fa 0/10 //switchlerin birbirne bağlı olduğu port 
+19-switchport mode trunk native vlan 1//switchler arası konfigürasyon
+20-switchport trun allowed vlan 1,5,10,15
+21-exit
+22-//bağlı olduğu switchlere aynı işlemleri yapıyoruz 
+
+ 

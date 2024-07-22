@@ -1,0 +1,34 @@
+#izmir router için
+
+1-router ospf 100 //id tanımlıyoruz
+//192.168.10.0/24 burdaki 24 24 tane 1 bitin olduğunu gösteriyor o da 255.255.255.0 eşit oluyor
+//10.0.0.0/8 burdaki 8 8 tane 1 bitin olduğunu gösteriyor o da 255.0.0.0 a eşit oluyor 
+
+2-network 192.168.10.0  0.0.0.255 area 0 // 0.0.0.255 wild card demektir // iç ağı tanttık
+wild card =(255.255.255.255 - subnet mask )
+
+3-network 10.0.0.0 0.255.255.255 area 0 //dış ağı tanıttık 
+
+4-do wr //çıkış yaptık
+
+#ankara router için
+
+1-router ospf 100 
+
+2-network 192.168.20.0 0.0.0.255 area 0
+
+3-network 10.0.0.0 0.255.255.255 area 0 
+
+4-network 30.0.0.0 0.255.255.255 area 0 
+
+5- do wr 
+
+#istanbul router için 
+
+1-router ospf 100
+
+2-network 192.168.30.0 0.0.0.255 area 0
+
+3-network 30.0.0.0 0.255.255.255 area 0 
+
+4-do wr 

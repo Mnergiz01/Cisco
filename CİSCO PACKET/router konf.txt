@@ -1,0 +1,13 @@
+1-enable
+2-conf t 
+3-interface f0/0 //yapılanıdırmak istediğimiz sw ye bağlı olan bacak 
+4-ip address 192.168.10.1 255.255.255.0 //routerın bağlı olduğu sw nin bulunduğu ip adresi ve maskesi 
+5- no shutdown
+6-interface serial 0/2/0 //diğer routerın bağlı olduğu bacak
+7-192.165.20.1 255.255.255.0 //routerların bulunduğu ip adresi
+8-exit
+//aynı işlemleri diğer router için de yapıyoruz 
+//diğer router için işlemler
+9-interface serial 0/2/0 
+10-192.165.20.2 255.255.255.0
+11-no shutdown

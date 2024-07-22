@@ -1,0 +1,7 @@
+1.sw nin ip adresi 192.168.10.0 255.255.255.0
+1.routerın ip adresi 192.165.20.0 255.255.255.0
+2.sw nin ip adresi 192.167.30.0 255.255.255.0
+2.routerın ip adresi 192.165.20.0 255.255.255.0
+1-ip route 192.167.30.0 255.255.255.0 192.165.20.2 // ulaşmak istediğimiz yerin ip adresi maskesi ve geçit olan routerın ip adresi
+//diğer router için de aynı işlemi yapıyoruz
+2-ip route 192.168.10.0 255.255.255.0 192.165.20.1 
